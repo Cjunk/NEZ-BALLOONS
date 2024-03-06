@@ -32,6 +32,19 @@ p {
   height: 100%;
   z-index: -2;
 }
+.parallax {
+  /* The image used */
+  background-image: url('NEZ_POSING_BALLOONS.jpg.');
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .header-container {
   background: red;
   height: 100px;
