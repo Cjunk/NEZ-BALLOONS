@@ -1,10 +1,20 @@
 body,
 html,
 p {
+  scroll-behavior: smooth;
   margin: 0;
   padding: 0;
   height: 100%;
   font-family: "Party", sans-serif;
+}
+.blurred-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 166px;
+  z-index: -1;
+  backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
 }
 .background {
   background-image: url("NEZ_POSING_BALLOONS.jpg");
@@ -46,19 +56,23 @@ p {
   background-size: cover;
 }
 .header-container {
-  background: red;
-  height: 100px;
+  background: transparent;
+  opacity:1;
+  height: 166px;
   position: sticky;
   top: 0;
-  z-index: 6;
+  z-index: 2;
+  box-shadow:4px 11px 50px 0 black;
+
 }
 .spacer {
-  height: 100%;
+  height: 500px;
   width: 100%;
   margin: 0;
   padding: 0;
   z-index: 5;
   background-size: 100%;
+  background:transparant;
 }
 .first-image {
   background-image: url("np-door-welcome.jpg");
@@ -75,14 +89,12 @@ p {
   padding: 20px;
   position: relative;
   z-index: 1;
-  border-radius: 40px;
   border: 4px solid gold;
-  margin-right: 10px;
-  margin-left: 10px;
+
 }
 
 .first-content {
-  margin-top: 100vh; /* Adjust this value to determine when the second background is revealed */
+  margin-top: 76vh; /* Adjust this value to determine when the second background is revealed */
 }
 .parallax {
   position: relative;
@@ -92,4 +104,36 @@ p {
 }
 .content-text {
   line-height: 1.5;
+}
+.menu-container {
+  background-color:red;
+}
+.menu {
+  list-style:none;
+  display:flex;
+  float:right;
+  margin-right:5px;
+  position:sticky;
+  
+}
+.menu-items{
+  padding-top:35px;
+  margin-right:25px;
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+}
+.menu-items:hover {
+  color:pink;
+  font-size:20px
+}
+.nez-balloons-title{
+  font-size:36px;
+  text-decoration-style: bold;
+
+}
+.span-header{
+  text-align:center;
+background-color:red;
+  
 }
