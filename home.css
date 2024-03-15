@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("./banner.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* Hide the scrollbar in WebKit browsers */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.contentdiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.image-container img {
+  display: block; /* Ensure the image behaves as a block element */
+  margin: 0 auto; /* Center the image horizontally */
+  max-width: 30%; /* Adjust the maximum width of the image */
+  max-height: 100%; /* Maintain the aspect ratio while limiting the height */
+  animation: shake 1s ease infinite; /* Apply the shake animation */
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+@media only screen and (max-width: 768px) {
+  .image-container {
+    width: 60%; /* Adjust width for smaller screens */
+  }
+}
